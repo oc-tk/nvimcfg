@@ -1,9 +1,0 @@
-{
-  "extras": [
-    "lazyvim.plugins.extras.lang.terraform"
-  ],
-  "news": {
-    "NEWS.md": "2191"
-  },
-  "version": 2
-}

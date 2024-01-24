@@ -2,27 +2,34 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^3", -- Recommended
+    lazy = false,
     ft = { "rust" },
     opts = {
       server = {
         on_attach = function(_, bufnr)
           vim.lsp.inlay_hint.enable(bufnr, true)
           -- register which-key mappings
-          local wk = require("which-key")
-          wk.register({
-            ["<leader>cR"] = {
-              function()
-                vim.cmd.RustLsp("codeAction")
-              end,
-              "Code Action",
-            },
-            ["<leader>dr"] = {
-              function()
-                vim.cmd.RustLsp("debuggables")
-              end,
-              "Rust debuggables",
-            },
-          }, { mode = "n", buffer = bufnr })
+          -- local wk = require("which-key")
+          -- wk.register({
+          --   ["<leader>cR"] = {
+          --     function()
+          --       vim.cmd.RustLsp("codeAction")
+          --     end,
+          --     "Code Action",
+          --   },
+          --   ["<leader>dr"] = {
+          --     function()
+          --       vim.cmd.RustLsp("debuggables")
+          --     end,
+          --     "Rust debuggables",
+          --   },
+          --   ["<leader>zz"] = {
+          --     function()
+          --       vim.cmd.RustLsp {'runnables'}
+          --     end,
+          --     "Rust runnables",
+          --   },
+          -- }, { mode = "n", buffer = bufnr })
         end,
         settings = {
           -- rust-analyzer language server configuration
