@@ -52,6 +52,19 @@ return {
                 ["napi-derive"] = { "napi" },
                 ["async-recursion"] = { "async_recursion" },
               },
+              inlayHints = {
+                maxLength = 100,
+                bindingModeHints = {
+                  enable = true,
+                },
+              },
+              hover = {
+                actions = {
+                  references = {
+                    enable = true,
+                  },
+                },
+              },
             },
           },
         },
